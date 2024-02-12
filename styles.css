@@ -1,0 +1,164 @@
+:root{
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+
+    --font-size: 14px;
+    --font-family: "Raleway", sans-serif;
+
+    --medium: 400;
+    --dark: 700;
+
+    --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%))
+}
+
+html{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--grayish-blue);
+}
+body{
+    height: 100vh;
+    background: url("./images/bg-desktop.png");
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+#upload{
+    background-color: var(--dark-blue);
+    padding: 2rem;
+    width: 17rem;
+    border-radius: 10px 6rem 10px 10px;
+    margin-right: 2rem;
+}
+#logo{
+    margin-bottom: 1.5rem;
+}
+#options{
+    display: flex;
+}
+.pic{
+    background-color: var(--very-dark-blue);
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#info{
+    background-color: var(--dark-blue);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+#info P{
+    color: var(--pale-blue);
+    font-weight: var(--medium);
+}
+#outer-bar{
+    width: 30rem;
+    height: 0.8rem;
+    background: var(--very-dark-blue);
+    border-radius: 30rem;
+    padding: 3px;
+    margin-bottom: 0.5rem;
+}
+#inner-bar{
+    width: 81.5%;
+    height: 0.8rem;
+    background: var(--gradient);
+    border-radius: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#end-point{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: white;
+    margin-right: 2px;
+}
+#storage{
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    color: var(--pale-blue);
+    font-weight: var(--dark);
+}
+#storage p{
+    margin-top: 0;
+    font-weight: var(--dark);
+}
+#left-data{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+}
+#left-data p{
+    margin: 0;
+    margin-left: 0.5rem;
+    font-weight: var(--dark);
+}
+h1{
+    margin: 0;
+    font-size: 40px;
+    font-weight: var(--dark);
+    color: var(--very-dark-blue);
+}
+#arrow {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-top: 25px solid white;
+    position: absolute;
+    bottom:82px;
+    right: 2.5rem;
+}
+
+@media (max-width:800px){
+    body{
+        background: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    #main{
+        display: block;
+        justify-content: center;
+    }
+    #upload{
+        margin-bottom: 2rem;
+    }
+    #arrow{
+        display: none;
+    }
+    #info{
+        width: 17rem;
+        padding-bottom: 3rem;
+    }
+    #outer-bar{
+        width: 100%;
+    }
+    #left-data{
+        top:310px;
+        right:100px;
+    }
+}
